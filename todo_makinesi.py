@@ -18,34 +18,37 @@ def uret_gorev():
         "Pencereyi aç ve kapat",
         "Su içmeyi unutma",
         "Bu görevi ertele",
-        "Başka bir görev ekle"
+        "Başka bir görev ekle",
+        "Rapor yazmayı düşün ama yazma"
     ]
     ortalar = [
         "ama önce",
         "sonra",
         "bir yandan da",
         "ve aynı zamanda",
-        "çünkü"
+        "çünkü",
+        "aynı anda"
     ]
     sonlar = [
         "daha fazla görev üret",
         "hiçbir şeyi bitirme",
         "listeyi uzat",
         "kendine yeni bir kriz yarat",
-        "bekle ve gözlemle"
+        "bekle ve gözlemle",
+        "toplantı ayarla"
     ]
-    # Gizli not: bazen sistemler de böyle çalışır, bitmez.
+    # Gizli not: bazen sistemler de böyle çalışır, bitmez. Özellikle resmi işler.
     return f"- [ ] {random.choice(baslar)} {random.choice(ortalar)} {random.choice(sonlar)}"
 
 def main():
     print("=== ASLA BİTMEYEN TODO LİSTESİ MAKİNESİ ===")
     print("Bu liste asla bitmeyecek. Kabul et ve devam et.\n")
     gorevler = []
-    for i in range(10):
+    for i in range(15):
         yeni = uret_gorev()
         gorevler.append(yeni)
         print(yeni)
-        time.sleep(0.5)
+        time.sleep(0.3)
     print("\nListe bitti mi? Hayır. Tekrar çalıştır.")
     print("Toplam görev sayısı sonsuza yakınlaşıyor...")
 
